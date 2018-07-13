@@ -1,0 +1,209 @@
+{
+    "name": "EBookingPlugin",
+    "version": "1.01",
+    "manifest_version":2,
+    "description": "Egert,An addin for Ebooking.",
+    "background": {
+        "scripts":
+        [
+            "jquery-1.7.2.min.js",
+            "account.js",
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "ico.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://ebooking.elong.com/*", "https://eb.elong.com/*","http://ebooking.elong.com/*", "http://eb.elong.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "elong.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    }, {
+        "matches": ["http://www.vipdlt.com/*", "https://www.vipdlt.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "ctrip.js"],
+        "run_at": "document_start",
+        "all_frames": true
+   }, {
+//        "matches": ["http://ebooking.jl-tour.com/*", "https://ebooking.jl-tour.com/*"],
+        "matches": ["http://ebooking.jladmin.cn/*", "https://ebooking.jladmin.cn/*"],
+//        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "jl-tour.js"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "jladmin.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    }, {
+        "matches": ["http://ebk.17u.cn/zizhuyou/*", "https://ebk.17u.cn/zizhuyou/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tongchengjiujing.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://ebk.17u.cn/jingqu/*", "http://ebk.17u.cn/jingqu/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tongchengmenpiao.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://ebk.17u.cn/ivacation/*", "http://ebk.17u.cn/ivacation/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tongchengvacation.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://ebk.17u.cn/ghotel/*", "http://ebk.17u.cn/ghotel/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tongchengghotel.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["https://vbooking.ctrip.com/*", "http://vbooking.ctrip.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "ctripmenpiao.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["https://ebooking.lvmama.com/*", "http://ebooking.lvmama.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "lvmama.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["https://www.tuniu.cn/*", "http://www.tuniu.cn/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tuniu.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["https://shanghu.qunar.com/*", "http://shanghu.qunar.com/*", "http://hota.qunar.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "qunar_ota.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://*.tujia.com/*", "https://*.tujia.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "tujia.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://eo.dianping.com/*","https://eo.dianping.com/*","http://3f.meituan.com/*", "https://3f.meituan.com/*" ,"https://epassport.meituan.com/*","http://epassport.meituan.com/*",  "http://ep.meituan.com/*", "https://ep.meituan.com/*","https://eb.meituan.com/*", "http://eb.meituan.com/*","https://e.dianping.com/*","http://e.dianping.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "meituan.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://yaochufa.fangcang.com/*", "https://yaochufa.fangcang.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "fangcang.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://*.zcfgoagain.com/*", "https://*.zcfgoagain.com/*"],
+        "js": ["jquery-1.7.2.min.js", "bililiteRange.js", "sendkeys.js", "ext.js", "panel.js", "zcf.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://gdws.nsenz.com/*", "https://gdws.nsenz.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "yijie.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://eb.miot.cn/*", "https://eb.miot.cn/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "baidu.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+    	"matches": ["http://ebooking.haoqiao.cn/login/*", "https://ebooking.haoqiao.cn/login/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "haoqiao.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["https://user.qunar.com/*", "http://user.qunar.com/*","https://tb2cadmin.qunar.com/*","http://tb2cadmin.qunar.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "qunar.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+        {
+            "matches": ["https://passport.mafengwo.cn/*", "http://passport.mafengwo.cn/*","https://seller.mafengwo.cn/*","http://seller.mafengwo.cn/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "mafengwo.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://shop.qyer.com/*", "https://shop.qyer.com/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "qyer.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["https://shanghu.qdingnet.com/*", "http://shanghu.qdingnet.com/*","https://qd.qdingnet.com/*","http://qd.qdingnet.com/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "qdingnet.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://merchant.superhouse.com.cn/*", "https://merchant.superhouse.com.cn/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "superhouse.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://www.10000s.com/*", "https://www.10000s.com/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "wanxiang.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://ebooking.ctrip.com/*", "https://ebooking.ctrip.com/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "ctripebooking.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://mms.yangkeduo.com/*", "https://mms.yangkeduo.com/*","http://mms.pinduoduo.com/*","https://mms.pinduoduo.com/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "yangkeduo.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://watchstore.scc-store.com:8801/*", "https://watchstore.scc-store.com:8801/*"],
+            "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "watchstore.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+      {
+        "matches": ["http://awp.meituan.com/*", "https://awp.meituan.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "meituan.js"],
+        "run_at": "document_start",
+        "all_frames": true
+      },
+      {
+        "matches": ["http://manager.csairholiday.com/*", "https://manager.csairholiday.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "csairholiday.js"],
+        "run_at": "document_start",
+        "all_frames": true
+      },
+      {
+        "matches": ["http://shop.minshengec.com/*", "https://shop.minshengec.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "minshengec.js"],
+        "run_at": "document_start",
+        "all_frames": true
+      },
+      {
+        "matches": ["http://www.zcfgoagain.com/*", "https://www.zcfgoagain.com/*"],
+        "js": ["jquery-1.7.2.min.js", "ext.js", "panel.js", "zcfgoagain.js"],
+        "run_at": "document_start",
+        "all_frames": true
+      }
+	],
+    "permissions": [
+        "tabs",
+        "cookies",
+        "<all_urls>"
+    ]
+}
